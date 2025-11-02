@@ -5,6 +5,8 @@
 
 :root {
   --background: #ffffff;
+  --background-2: #353846;
+  --background-4: #4a4d63;
   --foreground: #09090b;
   --card: #ffffff;
   --card-foreground: #09090b;
@@ -48,11 +50,21 @@
   --shadow-color: #000000;
   --shadow-2xs: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.05);
   --shadow-xs: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.05);
-  --shadow-sm: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 1px 2px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 1px 2px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow-md: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 2px 4px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow-lg: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 4px 6px -0.9px hsl(0 0% 0% / 0.10);
-  --shadow-xl: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.10), 0rem 8px 10px -0.9px hsl(0 0% 0% / 0.10);
+  --shadow-sm:
+    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow:
+    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 2px 4px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 4px 6px -0.9px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
+    0rem 8px 10px -0.9px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
@@ -60,6 +72,8 @@
 
 .dark {
   --background: #1c202a;
+  --background-2: #353846;
+  --background-4: #4a4d63;
   --foreground: #f8fafc;
   --card: #272b35;
   --card-foreground: #f8fafc;
@@ -103,16 +117,29 @@
   --shadow-color: #000000;
   --shadow-2xs: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.13);
   --shadow-xs: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.13);
-  --shadow-sm: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25), 0rem 1px 2px -0.9px hsl(0 0% 0% / 0.25);
-  --shadow: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25), 0rem 1px 2px -0.9px hsl(0 0% 0% / 0.25);
-  --shadow-md: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25), 0rem 2px 4px -0.9px hsl(0 0% 0% / 0.25);
-  --shadow-lg: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25), 0rem 4px 6px -0.9px hsl(0 0% 0% / 0.25);
-  --shadow-xl: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25), 0rem 8px 10px -0.9px hsl(0 0% 0% / 0.25);
+  --shadow-sm:
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.25);
+  --shadow:
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.25);
+  --shadow-md:
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 2px 4px -0.9px hsl(0 0% 0% / 0.25);
+  --shadow-lg:
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 4px 6px -0.9px hsl(0 0% 0% / 0.25);
+  --shadow-xl:
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 8px 10px -0.9px hsl(0 0% 0% / 0.25);
   --shadow-2xl: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.63);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-2: var(--background-2);
+  --color-background-2: var(--background-2);
+  --color-background-4: (--background-4);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);

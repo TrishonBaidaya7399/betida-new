@@ -23,6 +23,8 @@ const buttonVariants = cva(
           "bg-gradient-to-t from-purple-1 to-blue-1 text-white hover:opacity-80",
         greenGradient:
           "bg-gradient-to-t from-cyan-1 to-green-1 text-white hover:opacity-80",
+          cyanGradient:
+  "bg-gradient-to-t from-cyan-500 to-cyan-400 text-background hover:opacity-90 shadow-md",
       },
       size: {
         default: "h-10",
