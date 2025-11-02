@@ -1,0 +1,12 @@
+{
+  "homepage": {
+    "builtWith": "Hergestellt mit",
+    "deployedOn": "• Bereitgestellt auf",
+    "docs": "Dokumentation",
+    "github": "GitHub",
+    "header": "Willkommen bei",
+    "pageName": "app/seite.tsx",
+    "subHeading": "Fangen Sie an, indem Sie bearbeiten",
+    "version": "Next.js 16"
+  }
+}

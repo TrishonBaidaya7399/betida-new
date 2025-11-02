@@ -1,0 +1,12 @@
+{
+  "homepage": {
+    "builtWith": "İle inşa edildi",
+    "deployedOn": "• Dağıtıldı",
+    "docs": "Dokümantasyon",
+    "github": "GitHub",
+    "header": "Hoş geldiniz",
+    "pageName": "uygulama/sayfa.tsx",
+    "subHeading": "Düzenlemeye başlayın",
+    "version": "Next.js 16"
+  }
+}

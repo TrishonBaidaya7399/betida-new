@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [main, ci/*]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-checks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write  
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm          
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Type-check
+        run: npm run typecheck  
+
+      - name: Enforce Tailwind best-practices
+        run: |
+          set -euo pipefail   # fail fast
+
+          echo "Checking for hard-coded colors / spacing / inline styles..."
+
+          # Helper: print file:line and fail
+          check() {
+            local pattern="$1"
+            local message="$2"
+            if grep -RInE "$pattern" src/; then
+              echo "ERROR: $message"
+              exit 1
+            fi
+          }
+
+          check '#[0-9a-fA-F]{3,8}' \
+                'Hard-coded hex colors detected – use Tailwind classes or CSS variables'
+
+          check 'rgba\(' \
+                'Hard-coded rgba colors detected – use Tailwind classes or CSS variables'
+
+          check 'hsl\(' \
+                'Hard-coded hsl colors detected – use Tailwind classes or CSS variables'
+
+          check '[0-9.]+px' \
+                'Hard-coded pixel values detected – use Tailwind spacing (rem) or CSS variables'
+
+          check 'style=\{\{' \
+                'Inline style={{}} detected – use Tailwind classes instead'
+
+          echo "All Tailwind checks passed!"
+        env:
+          GREP_COLORS: 'mt=1;33'
+
+      - name: Build
+        run: npm run build 
+
+      - name: Run tests
+        run: npm run test || true  

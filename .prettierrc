@@ -1,0 +1,25 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 120,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "importOrder": [
+    "^server-only$",
+    "^(react|react-dom)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(app|constants|components|hooks|images|lib|mocks|models|providers|server|services|storybook|styles|assets|store|theme|data)(/.*)?$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "tailwindConfig": "./tailwind.config.ts",
+  "overrides": [
+    {
+      "files": ".gitlab-ci.yml",
+      "options": { "singleQuote": false }
+    }
+  ]
+}
