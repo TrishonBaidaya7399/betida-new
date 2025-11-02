@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
-import { getTranslations } from 'next-intl/server'
+import {setRequestLocale } from 'next-intl/server'
+import { useTranslations } from 'next-intl';
+import LanguageSwitcher from '@/components/global-components/language-dropdown';
 
-async function HomePage() {
-  const t = await getTranslations('homepage')
+function HomePage({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = use(params);
+  setRequestLocale(locale)
+  const t = useTranslations('homepage')
   return (
     <div>
          <div className="flex flex-col items-center text-center">
@@ -31,6 +35,7 @@ async function HomePage() {
               {t("github")}
             </Link>
           </Button>
+          <LanguageSwitcher/>
         </div>
       </div>
     </div>

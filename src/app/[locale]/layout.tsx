@@ -1,11 +1,11 @@
-import { getMessages } from 'next-intl/server'
+import {setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 
 import './globals.css' 
 import Loading from './loading'
 import { Suspense } from 'react'
-import GlobalProvider from '@/providers/global-provider'
+import { NextIntlClientProvider } from 'next-intl'
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
@@ -24,15 +24,15 @@ export default async function RootLayout({
     notFound()
   }
 
-  const messages = await getMessages()
+  setRequestLocale(locale)
 
   return (
     <html lang={locale}>
       <body>
        <Suspense fallback={<Loading />}>
-          <GlobalProvider locale={locale} messages={messages}>
+           <NextIntlClientProvider>
             {children}
-          </GlobalProvider>
+           </NextIntlClientProvider>
         </Suspense>
       </body>
     </html>
