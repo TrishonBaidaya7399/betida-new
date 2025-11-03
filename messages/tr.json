@@ -1,4 +1,16 @@
 {
+  "header": {
+    "depositLink": "Yatırmak",
+    "noResults": "Para birimi bulunamadı",
+    "searchCurrency": "Para birimi ara",
+    "signin": "Giriş Yap",
+    "signup": "Kaydol",
+    "viewInCurrency": "Para Biriminde Görüntüle",
+    "hideSmall": "Küçükleri Gizle",
+    "viewInCurrencyDesc": "Görmek istediğiniz para birimini seçin. Para birimleri yaklaşık değerlerle gösterilecektir.",
+    "search": "Ara",
+    "bonusDashboard": "Bonus Paneli"
+  },
   "homepage": {
     "builtWith": "İle inşa edildi",
     "deployedOn": "• Dağıtıldı",
@@ -8,5 +20,19 @@
     "pageName": "uygulama/sayfa.tsx",
     "subHeading": "Düzenlemeye başlayın",
     "version": "Next.js 16"
+  },
+  "userMenu": {
+    "Affiliate": "Ortaklık",
+    "Bet History": "Bahis Geçmişi",
+    "BuyCrypto": "Kripto Satın Al",
+    "Global Settings": "Küresel Ayarlar",
+    "Log Out": "Çıkış Yap",
+    "My Profile": "Profilim",
+    "Rollover Overview": "Fare Üzerine Genel Bakış",
+    "Transactions": "İşlemler",
+    "Vault Pro": "Vault Pro",
+    "VIP Club": "VIP Kulübü",
+    "wallet": "Cüzdan",
+    "Withdraw": "Çekil"
   }
 }

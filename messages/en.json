@@ -1,4 +1,16 @@
 {
+  "header": {
+    "depositLink": "Deposit",
+    "noResults": "No currency found",
+    "searchCurrency": "Search currency",
+    "signin": "Sign In",
+    "signup": "Sign Up",
+    "viewInCurrency": "View In Currency",
+    "hideSmall": "Hide Small",
+    "viewInCurrencyDesc": "Select the desired currency to display. The currencies will be shown in approximated values.",
+    "search": "Search",
+    "bonusDashboard": "Bonus Dashboard"
+  },
   "homepage": {
     "builtWith": "Built with",
     "deployedOn": "• Deployed on",
@@ -8,5 +20,19 @@
     "pageName": "app/page.tsx",
     "subHeading": " Get started by editing",
     "version": "Next.js 16"
+  },
+  "userMenu": {
+    "Affiliate": "Affiliate",
+    "Bet History": "Bet History",
+    "BuyCrypto": "Buy Crypto",
+    "Global Settings": "Global Settings",
+    "Log Out": "Log Out",
+    "My Profile": "My Profile",
+    "Rollover Overview": "Rollover Overview",
+    "Transactions": "Transactions",
+    "Vault Pro": "Vault Pro",
+    "VIP Club": "VIP Club",
+    "wallet": "Wallet",
+    "Withdraw": "Withdraw"
   }
 }

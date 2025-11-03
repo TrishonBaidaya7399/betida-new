@@ -3,6 +3,7 @@ import { persist } from "zustand/middleware";
 
 export type User = {
   username: string;
+  profilePicture?: string;
   email: string;
   vipProgress: number;
   level: string;

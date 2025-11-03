@@ -5,8 +5,8 @@ import { useSidebarStore } from "@/store/sidebar-store";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import AppHeader from "@/components/common/app-header";
-import AppSidebar from "@/components/common/app-sidebar";
+import AppHeader from "@/components/common/layout/app-header";
+import AppSidebar from "@/components/common/layout/app-sidebar";
 
 const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
   const [mounted, setMounted] = useState(false);

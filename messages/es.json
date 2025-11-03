@@ -1,4 +1,16 @@
 {
+  "header": {
+    "depositLink": "Depósito",
+    "noResults": "No se encontró ninguna moneda",
+    "searchCurrency": "Buscar moneda",
+    "signin": "Iniciar sesión",
+    "signup": "Regístrate",
+    "viewInCurrency": "Ver en moneda",
+    "hideSmall": "Ocultar pequeños",
+    "viewInCurrencyDesc": "Seleccione la moneda deseada para mostrar. Las monedas se mostrarán en valores aproximados.",
+    "search": "Buscar",
+    "bonusDashboard": "Panel de Bonos"
+  },
   "homepage": {
     "builtWith": "Construido con",
     "deployedOn": "• Desplegado en",
@@ -8,5 +20,19 @@
     "pageName": "app/página.tsx",
     "subHeading": "Comienza editando",
     "version": "Next.js 16"
+  },
+  "userMenu": {
+    "Affiliate": "Afiliado",
+    "Bet History": "Historial de apuestas",
+    "BuyCrypto": "Comprar Cripto",
+    "Global Settings": "Configuración Global",
+    "Log Out": "Cerrar sesión",
+    "My Profile": "Mi perfil",
+    "Rollover Overview": "Descripción general de rollover",
+    "Transactions": "Transacciones",
+    "Vault Pro": "Vault Pro",
+    "VIP Club": "Club VIP",
+    "wallet": "Billetera",
+    "Withdraw": "Retirar"
   }
 }

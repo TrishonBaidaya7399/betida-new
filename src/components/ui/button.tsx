@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
-import { Link } from "@/i18n/navigation"
+import { cn } from "@/lib/utils";
+import { Link } from "@/i18n/navigation";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40",
   {
     variants: {
       variant: {
-        gray: "bg-background-2 text-white hover:bg-gray-500",
+        gray: "bg-background-2 text-white hover:bg-foreground/25",
         ghost: "bg-transparent text-white hover:bg-gray-500",
         outline:
           "border-2 border-white-3 bg-background text-white hover:bg-gray-900",
@@ -23,8 +23,8 @@ const buttonVariants = cva(
           "bg-gradient-to-t from-purple-1 to-blue-1 text-white hover:opacity-80",
         greenGradient:
           "bg-gradient-to-t from-cyan-1 to-green-1 text-white hover:opacity-80",
-          cyanGradient:
-  "bg-gradient-to-t from-cyan-500 to-cyan-400 text-background hover:opacity-90 shadow-md",
+        cyanGradient:
+          "bg-gradient-to-r from-primary to-primary-2 text-background hover:opacity-90 shadow-md",
       },
       size: {
         default: "h-10",
@@ -42,16 +42,16 @@ const buttonVariants = cva(
       fullWidth: false,
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
-  href?: string
-  prefetch?: boolean
-  icon?: React.ReactNode
-  ariaLabel?: string
+  asChild?: boolean;
+  href?: string;
+  prefetch?: boolean;
+  icon?: React.ReactNode;
+  ariaLabel?: string;
 }
 
 // === Button Component ===
@@ -73,42 +73,43 @@ function Button({
   // === Accessibility warning ===
   React.useEffect(() => {
     if (process.env.NODE_ENV === "development") {
-      const hasLabel = !!children || !!ariaLabel
+      const hasLabel = !!children || !!ariaLabel;
       if (!hasLabel) {
         console.warn(
           "Button missing accessible name: Add children (text) or ariaLabel prop."
-        )
+        );
       }
     }
-  }, [children, ariaLabel])
+  }, [children, ariaLabel]);
 
-  const Comp = asChild && href ? Link : asChild ? Slot : "button"
-  const isLink = Comp === Link
+  const Comp = asChild && href ? Link : asChild ? Slot : "button";
+  const isLink = Comp === Link;
 
   const classes = cn(
-    buttonVariants({ variant, size, fullWidth, className }),
+    buttonVariants({ variant, size, fullWidth, className }),"cursor-pointer",
     disabled && "cursor-not-allowed opacity-50"
-  )
+  );
 
-  // === Safe onClick for both button and link ===
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>
+  ) => {
     if (disabled) {
-      e.preventDefault()
-      return
+      e.preventDefault();
+      return;
     }
     // Call original onClick with correct event type
     if (onClick) {
       // @ts-ignore - we know it's safe
-      onClick(e as React.MouseEvent<HTMLButtonElement>)
+      onClick(e as React.MouseEvent<HTMLButtonElement>);
     }
-  }
+  };
 
   const linkProps = isLink
     ? {
         href,
         prefetch: prefetch ?? "auto",
       }
-    : {}
+    : {};
 
   if (isLink) {
     return (
@@ -123,7 +124,7 @@ function Button({
         {children}
         {icon && <span aria-hidden="true">{icon}</span>}
       </Link>
-    )
+    );
   }
 
   if (asChild) {
@@ -135,12 +136,12 @@ function Button({
         onClick={handleClick}
         {...(props as any)}
       >
-         <>
-        {children}
-        {icon && <span aria-hidden="true">{icon}</span>}
-      </>
+        <>
+          {children}
+          {icon && <span aria-hidden="true">{icon}</span>}
+        </>
       </Slot>
-    )
+    );
   }
 
   return (
@@ -155,9 +156,9 @@ function Button({
       {children}
       {icon && <span aria-hidden="true">{icon}</span>}
     </button>
-  )
+  );
 }
 
-Button.displayName = "Button"
+Button.displayName = "Button";
 
-export { Button, buttonVariants }
+export { Button, buttonVariants };

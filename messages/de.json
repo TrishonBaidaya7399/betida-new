@@ -1,4 +1,16 @@
 {
+  "header": {
+    "depositLink": "Einzahlung",
+    "noResults": "Keine Währung gefunden",
+    "searchCurrency": "Währung suchen",
+    "signin": "Anmelden",
+    "signup": "Registrieren",
+    "viewInCurrency": "In Währung anzeigen",
+    "hideSmall": "Kleine verstecken",
+    "viewInCurrencyDesc": "Wählen Sie die gewünschte Währung zur Anzeige aus. Die Währungen werden in ungefähren Werten angezeigt.",
+    "search": "Suchen",
+    "bonusDashboard": "Bonus-Dashboard"
+  },
   "homepage": {
     "builtWith": "Hergestellt mit",
     "deployedOn": "• Bereitgestellt auf",
@@ -8,5 +20,19 @@
     "pageName": "app/seite.tsx",
     "subHeading": "Fangen Sie an, indem Sie bearbeiten",
     "version": "Next.js 16"
+  },
+  "userMenu": {
+    "Affiliate": "Affiliate",
+    "Bet History": "Wettverlauf",
+    "BuyCrypto": "Krypto kaufen",
+    "Global Settings": "Globale Einstellungen",
+    "Log Out": "Abmelden",
+    "My Profile": "Mein Profil",
+    "Rollover Overview": "Überblick über Rollovers",
+    "Transactions": "Transaktionen",
+    "Vault Pro": "Vault Pro",
+    "VIP Club": "VIP-Club",
+    "wallet": "Brieftasche",
+    "Withdraw": "Abheben"
   }
 }
