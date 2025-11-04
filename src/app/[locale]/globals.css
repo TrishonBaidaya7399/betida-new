@@ -4,72 +4,70 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #1c202a;
   --background-2: #353846;
   --background-4: #4a4d63;
   --background-5: #171822;
-  --foreground: #09090b;
-  --card: #ffffff;
-  --card-foreground: #09090b;
-  --popover: #ffffff;
-  --popover-foreground: #09090b;
+  --foreground: #f8fafc;
+  --card: #272b35;
+  --card-foreground: #f8fafc;
+  --popover: #272b35;
+  --popover-foreground: #f8fafc;
   --primary: #38bdf8;
   --primary-2: #77eedf;
-  --primary-foreground: #f9fafb;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #e2e8f0;
-  --accent-foreground: #0f172a;
+  --primary-foreground: #020817;
+  --secondary: #3f4657;
+  --secondary-foreground: #f8fafc;
+  --muted: #3f4657;
+  --muted-foreground: #a3a3a3;
+  --accent: #3f4657;
+  --accent-foreground: #f8fafc;
   --destructive: #ef4444;
   --destructive-foreground: #f9fafb;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #6b49e8;
-  --chart-1: #6b49e8;
-  --chart-2: #8b5cf6;
-  --chart-3: #a78bfa;
-  --chart-4: #c4b5fd;
-  --chart-5: #ddd6fe;
-  --sidebar: #f8fafc;
-  --sidebar-foreground: #09090b;
-  --sidebar-primary: #6b49e8;
-  --sidebar-primary-foreground: #f9fafb;
-  --sidebar-accent: #e2e8f0;
-  --sidebar-accent-foreground: #0f172a;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #6b49e8;
+  --border: #3f4657;
+  --input: #3f4657;
+  --ring: #38bdf8;
+  --chart-1: #38bdf8;
+  --chart-2: #1d4ed8;
+  --chart-3: #93c5fd;
+  --chart-4: #bfdbfe;
+  --chart-5: #dbeafe;
+  --sidebar: #272b35;
+  --sidebar-foreground: #a3a3a3;
+  --sidebar-primary: #38bdf8;
+  --sidebar-primary-foreground: #f8fafc;
+  --sidebar-accent: #3f4657;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #3f4657;
+  --sidebar-ring: #38bdf8;
   --font-sans: sans-serif;
   --font-serif: serif;
   --font-mono: monospace;
   --radius: 0.5rem;
   --shadow-x: 0rem;
-  --shadow-y: 0.2rem;
-  --shadow-blur: 0.5rem;
+  --shadow-y: 0.25rem;
+  --shadow-blur: 0.25rem;
   --shadow-spread: 0.1rem;
-  --shadow-opacity: 0.1;
+  --shadow-opacity: 0.25;
   --shadow-color: #000000;
-  --shadow-2xs: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.05);
-  --shadow-xs: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.05);
+  --shadow-2xs: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.13);
+  --shadow-xs: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.13);
   --shadow-sm:
-    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
-    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.1);
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.25);
   --shadow:
-    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
-    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.1);
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 1px 2px -0.9px hsl(0 0% 0% / 0.25);
   --shadow-md:
-    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
-    0rem 2px 4px -0.9px hsl(0 0% 0% / 0.1);
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 2px 4px -0.9px hsl(0 0% 0% / 0.25);
   --shadow-lg:
-    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
-    0rem 4px 6px -0.9px hsl(0 0% 0% / 0.1);
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 4px 6px -0.9px hsl(0 0% 0% / 0.25);
   --shadow-xl:
-    0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.1),
-    0rem 8px 10px -0.9px hsl(0 0% 0% / 0.1);
-  --shadow-2xl: 0rem 0.2rem 0.5rem 0.1rem hsl(0 0% 0% / 0.25);
-  --tracking-normal: 0em;
-  --spacing: 0.25rem;
+    0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.25),
+    0rem 8px 10px -0.9px hsl(0 0% 0% / 0.25);
+  --shadow-2xl: 0rem 0.25rem 0.25rem 0.1rem hsl(0 0% 0% / 0.63);
 }
 
 .dark {

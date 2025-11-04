@@ -34,6 +34,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  cacheComponents: true,
+  compress: true,
   experimental: {
     optimizePackageImports: ["lucide-react", "@radix-ui/react-icons"],
   },

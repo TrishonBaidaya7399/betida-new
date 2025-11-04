@@ -1,11 +1,12 @@
 export interface MenuItem {
   text: string;
-  icon?: any;
   href?: string;
+  icon?: React.FC<any>;
+  children?: MenuItem[];
+  requiresAuth?: boolean;
   onclick?: () => void;
   navigateTo?: string;
-  children?: MenuItem[];
-  casinoOnly?: boolean;
-  sportsOnly?: boolean;
-  requiresAuth?: boolean;
+  badge?: string;
+  locale?: string;
+  flag?: string
 }

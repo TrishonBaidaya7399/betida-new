@@ -34,5 +34,13 @@
     "VIP Club": "VIP Kulübü",
     "wallet": "Cüzdan",
     "Withdraw": "Çekil"
+  },
+  "MobileFooter": {
+    "browse": "Gözat",
+    "casino": "Kumarhane",
+    "bets": "Bahisler",
+    "sports": "Spor",
+    "chat": "Sohbet",
+    "chatComingSoon": "Sohbet özelliği yakında geliyor!"
   }
 }

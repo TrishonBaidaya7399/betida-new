@@ -34,5 +34,13 @@
     "VIP Club": "VIP Club",
     "wallet": "Wallet",
     "Withdraw": "Withdraw"
+  },
+  "MobileFooter": {
+    "browse": "Browse",
+    "casino": "Casino",
+    "bets": "Bets",
+    "sports": "Sports",
+    "chat": "Chat",
+    "chatComingSoon": "Chat feature is coming soon!"
   }
 }

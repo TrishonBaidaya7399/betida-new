@@ -34,5 +34,13 @@
     "VIP Club": "Club VIP",
     "wallet": "Billetera",
     "Withdraw": "Retirar"
+  },
+  "MobileFooter": {
+    "browse": "Explorar",
+    "casino": "Casino",
+    "bets": "Apuestas",
+    "sports": "Deportes",
+    "chat": "Chat",
+    "chatComingSoon": "¡La función de chat llegará pronto!"
   }
 }

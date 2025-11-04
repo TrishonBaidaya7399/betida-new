@@ -136,10 +136,10 @@ function Button({
         onClick={handleClick}
         {...(props as any)}
       >
-        <>
+        <span>
           {children}
           {icon && <span aria-hidden="true">{icon}</span>}
-        </>
+        </span>
       </Slot>
     );
   }

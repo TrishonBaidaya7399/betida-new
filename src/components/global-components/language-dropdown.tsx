@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Globe } from "lucide-react";
 import {
   DropdownMenu,
@@ -25,7 +25,8 @@ export default function LanguageSwitcher() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  const currentOption = languageOptions.find((o) => o.value === locale) ?? languageOptions[0];
+  const currentOption =
+    languageOptions.find((o) => o.value === locale) ?? languageOptions[0];
 
   const handleSelect = (newLocale: string) => {
     if (newLocale !== locale) {
@@ -38,17 +39,22 @@ export default function LanguageSwitcher() {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="gray"
-          size="icon"
-          aria-label={`Current language: ${currentOption.label}`}
-        >
-          <Globe className="w-4 h-4 text-foreground/70" />
-          <span className="sr-only">{currentOption.label}</span>
-        </Button>
+        <Suspense fallback={<div className="bg-gray rounded-lg size-10" />}>
+          <Button
+            variant="gray"
+            size="icon"
+            aria-label={`Current language: ${currentOption.label}`}
+          >
+            <Globe className="w-4 h-4 text-foreground/70" />
+            <span className="sr-only">{currentOption.label}</span>
+          </Button>
+        </Suspense>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="w-40 p-1 bg-card border-border shadow-lg rounded-lg">
+      <DropdownMenuContent
+        align="end"
+        className="w-40 p-1 bg-card border-border shadow-lg rounded-lg"
+      >
         {languageOptions.map((option) => (
           <DropdownMenuItem
             key={option.value}
@@ -56,9 +62,10 @@ export default function LanguageSwitcher() {
             className={`
               flex items-center justify-between px-3 py-2 text-sm font-medium cursor-pointer
               rounded-md transition-colors
-              ${option.value === locale 
-                ? "bg-accent text-accent-foreground" 
-                : "hover:bg-accent/50 text-foreground"
+              ${
+                option.value === locale
+                  ? "bg-accent text-accent-foreground"
+                  : "hover:bg-accent/50 text-foreground"
               }
             `}
           >

@@ -58,7 +58,6 @@ export default function AppHeader() {
     toggleAuthModalOpen();
   };
 
-
   //   const handleSearchTermChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   //     const value = e.target.value;
   //     setSearchTerm(value);
@@ -96,6 +95,8 @@ export default function AppHeader() {
               width={32}
               height={32}
               className="w-8 h-8"
+              priority
+              fetchPriority="high"
             />
             {/* <span className="text-2xl font-bold text-foreground">BETIDA</span> */}
           </div>
@@ -166,7 +167,9 @@ export default function AppHeader() {
               </Button>
 
               {/* Language Selector */}
-              <LanguageSwitcher />
+              <span className="hidden md:flex">
+                <LanguageSwitcher />
+              </span>
               {/* Search Icon (Mobile Only) */}
               <Button
                 variant="gray"
