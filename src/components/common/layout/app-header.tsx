@@ -1,13 +1,11 @@
 "use client";
 import { Button } from "../../ui/button";
 import { Suspense } from "react";
-import { ArrowDownUp, Search } from "lucide-react";
+import { Search } from "lucide-react";
 // import { useAuthStore } from "@/store/auth-store";
-import { useRouter } from "@/i18n/navigation";
 import { useSidebarStore } from "@/store/sidebar-store";
 // import { debounce } from "@/lib/utils";
 import LanguageSwitcher from "../../global-components/language-dropdown";
-import AnimatedHamburger from "../../global-components/animated-hamburger";
 import { useAuthStore } from "@/store/auth-store";
 import { toast } from "sonner";
 import { ButtonGroup } from "../../ui/button-group";
@@ -17,14 +15,13 @@ import MessageSvg from "@/components/svg-icons/mesage-svg";
 import NotiSvg from "@/components/svg-icons/noti-svg";
 import GlobalWalletCurrencySelect from "@/components/global-components/global-wallet-currency-select";
 import GiftDropdown from "@/components/global-components/gift-dropdown";
+import Image from "next/image";
 
 export default function AppHeader() {
   const t = useTranslations("header");
   //   const [showSearchModal, setShowSearchModal] = useState(false);
-  const router = useRouter();
   //   const [searchTerm, setSearchTerm] = useState("");
-  const { toggleAuthModalOpen, toggleWalletSetupModalOpen } = useSidebarStore();
-  const { mobileOpen, toggleMobileOpen } = useSidebarStore();
+  const { toggleAuthModalOpen } = useSidebarStore();
   //   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
   const { user: authUser, setUser } = useAuthStore();
   //   const debouncedUpdateQueryParams = useMemo(() => {
@@ -61,10 +58,6 @@ export default function AppHeader() {
     toggleAuthModalOpen();
   };
 
-  const handleWalletClick = () => {
-    router.push("?wallet-tab=welcome");
-    toggleWalletSetupModalOpen();
-  };
 
   //   const handleSearchTermChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   //     const value = e.target.value;
@@ -96,8 +89,15 @@ export default function AppHeader() {
         }
       >
         <div className="app-container flex items-center justify-between md:justify-end p-3">
-          <div className="md:hidden block">
-            <AnimatedHamburger isOpen={mobileOpen} onClick={toggleMobileOpen} />
+          <div className="md:hidden flex flex-row items-center gap-3">
+            <Image
+              src="/logos/logo.webp"
+              alt="Betida"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
+            {/* <span className="text-2xl font-bold text-foreground">BETIDA</span> */}
           </div>
           {authUser ? (
             <div className="flex items-center gap-2">
@@ -110,26 +110,18 @@ export default function AppHeader() {
                   );
                 }}
                 aria-label="Search"
+                className="hidden md:block"
               >
                 <Search className="w-4 h-4 text-muted-foreground" />
               </Button>
               {/* Wallet Balance */}
               <GlobalWalletCurrencySelect />
-              <GiftDropdown />
-
-              {/* Mobile Deposit */}
-              <Button
-                variant="cyanGradient"
-                size="sm"
-                className="sm:hidden w-8 h-8"
-                onClick={handleWalletClick}
-                aria-label="down"
-              >
-                <ArrowDownUp className="w-4 h-4" />
-              </Button>
+              <span className="hidden md:block">
+                <GiftDropdown />
+              </span>
 
               {/* Notifications */}
-              <ButtonGroup className="bg-gray">
+              <ButtonGroup className="bg-gray hidden sm:block">
                 <Button
                   variant="gray"
                   aria-label="messages and chats"

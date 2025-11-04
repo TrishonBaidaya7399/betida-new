@@ -22,6 +22,7 @@ import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import GlobalModal from "./global-modal/global-modal";
 import ViewInCurrencyModalContentWrapper from "../modals/view-in-currency-modal";
+import DepositSvg from "../svg-icons/deposit-svg";
 
 interface Currency {
   value: string;
@@ -219,8 +220,19 @@ export default function GlobalWalletCurrencySelect() {
         {/* === DEPOSIT BUTTON === */}
         <Button
           variant="cyanGradient"
+          size="icon"
+          className="md:hidden h-full px-4 text-sm font-semibold"
+          onClick={(e) => {
+            e.stopPropagation();
+            toast.info("Deposit feature is coming soon!");
+          }}
+        >
+          <DepositSvg className="text-background size-6" size={32} />
+        </Button>
+        <Button
+          variant="cyanGradient"
           size="sm"
-          className="h-full px-4 text-sm font-semibold"
+          className="hidden md:flex h-full px-4 text-sm font-semibold"
           onClick={(e) => {
             e.stopPropagation();
             toast.info("Deposit feature is coming soon!");

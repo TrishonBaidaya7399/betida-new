@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "next:dev": "next dev",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "i18nexus:listen": "i18nexus listen",
-    "dev": "concurrently \"npm run next:dev\" \"npm run i18nexus:listen\"",
-    "build": "i18nexus pull && next build",
-    "start": "i18nexus pull && next start",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "storybook": "storybook dev -p 6006",
