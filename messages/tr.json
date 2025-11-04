@@ -42,5 +42,29 @@
     "sports": "Spor",
     "chat": "Sohbet",
     "chatComingSoon": "Sohbet özelliği yakında geliyor!"
+  },
+  "DepositModal": {
+    "title": "Yatırma",
+    "tabs": {
+      "crypto": "Kripto",
+      "fiat": "Fiat"
+    },
+    "more": "Daha Fazla",
+    "didntSee": "Para biriminizi görmediniz mi?",
+    "addHere": "Buraya ekle",
+    "depositCurrency": "Yatırma Para Birimi",
+    "chooseNetwork": "Coin Ağı Seç",
+    "howToDeposit": "Kripto nasıl yatırılır?",
+    "chooseBonus": "Bonusunuzu seçin",
+    "minDeposit": "Min. yatırma",
+    "bonusInfo": "Yatırma tutarınız ve bonusunuz {casino} hesabınıza {wager} çevrim şartıyla yatırılacaktır.",
+    "bonusTC": "Bonus Şartları",
+    "depositAddress": "Yatırma adresi",
+    "copyAddress": "Adresi Kopyala",
+    "copySuccess": "Yatırma adresi kopyalandı!",
+    "sendOnly": "Bu adrese sadece <strong>USDT</strong> gönderin.",
+    "minTransfer": "<strong>1 USDT</strong> altındaki transferler hesaba eklenmeyecektir.",
+    "fiatUnavailable": "Fiat yatırma henüz kullanılamıyor.",
+    "useCrypto": "Lütfen kripto ile yatırma yapın."
   }
 }

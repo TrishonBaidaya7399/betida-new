@@ -203,3 +203,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Fix scroll inside modal on iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .ios-scroll-fix {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto !important;
+    height: 80vh !important;
+  }
+}

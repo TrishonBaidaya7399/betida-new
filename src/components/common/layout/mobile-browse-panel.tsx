@@ -163,7 +163,14 @@ function MobileMenuItem({
                         />
                       </div>
                     )}
-                    <span>{child.text}</span>
+                    <span className="flex flex-row items-center gap-1">
+                      <ChevronRight
+                        size={20}
+                        className="text-foreground"
+                        strokeWidth={2}
+                      />
+                      {child.text}
+                    </span>
                   </button>
                 );
               })}
@@ -203,10 +210,10 @@ export default function MobileBrowsePanel() {
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
           transition={{ type: "tween", duration: 0.3 }}
-          className="fixed inset-0 top-16 bottom-0 z-40 bg-sidebar overflow-y-auto md:hidden"
+          className="fixed inset-0 top-16 bottom-16 z-40 bg-sidebar overflow-y-auto md:hidden"
         >
           {/* === MENU SECTIONS === */}
-          <div className="px-4 pb-6 space-y-1.5 mb-3">
+          <div className="px-4 pb-6 space-y-1.5">
             <Suspense fallback={<MenuSkeleton />}>
               {menuSections.map((section, idx) => (
                 <div key={idx} className="space-y-1.5">

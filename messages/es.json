@@ -42,5 +42,29 @@
     "sports": "Deportes",
     "chat": "Chat",
     "chatComingSoon": "¡La función de chat llegará pronto!"
+  },
+  "DepositModal": {
+    "title": "Depósito",
+    "tabs": {
+      "crypto": "Cripto",
+      "fiat": "Fiat"
+    },
+    "more": "Más",
+    "didntSee": "¿No ves tu moneda?",
+    "addHere": "Añadir aquí",
+    "depositCurrency": "Moneda de depósito",
+    "chooseNetwork": "Elegir red de moneda",
+    "howToDeposit": "¿Cómo depositar cripto?",
+    "chooseBonus": "Elige tu bono",
+    "minDeposit": "Depósito mín.",
+    "bonusInfo": "Tu monto de depósito y bono se acreditarán en tu {casino} con requisito de apuesta de {wager}.",
+    "bonusTC": "T&C del bono",
+    "depositAddress": "Dirección de depósito",
+    "copyAddress": "Copiar dirección",
+    "copySuccess": "¡Dirección copiada con éxito!",
+    "sendOnly": "Envía solo <strong>USDT</strong> a esta dirección.",
+    "minTransfer": "Transferencias por debajo de <strong>1 USDT</strong> no serán acreditadas.",
+    "fiatUnavailable": "El depósito en fiat no está disponible aún.",
+    "useCrypto": "Por favor usa Cripto para depositar."
   }
 }

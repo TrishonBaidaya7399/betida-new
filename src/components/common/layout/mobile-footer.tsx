@@ -12,14 +12,14 @@ import { toast } from "sonner";
 
 export default function MobileFooter() {
   const pathname = usePathname();
-  const { setBrowseOpen } = useSidebarStore();
+  const { browseOpen, setBrowseOpen } = useSidebarStore();
   const t = useTranslations("MobileFooter");
 
   const navItems = [
     {
       label: t("browse"),
       icon: BrowseIcon,
-      action: () => setBrowseOpen(true),
+      action: () => setBrowseOpen(!browseOpen),
       isActive: false,
     },
     {

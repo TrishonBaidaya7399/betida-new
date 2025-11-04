@@ -42,5 +42,29 @@
     "sports": "Sport",
     "chat": "Chat",
     "chatComingSoon": "Chat-Funktion kommt bald!"
+  },
+  "DepositModal": {
+    "title": "Einzahlung",
+    "tabs": {
+      "crypto": "Krypto",
+      "fiat": "Fiat"
+    },
+    "more": "Mehr",
+    "didntSee": "Ihre Währung nicht gefunden?",
+    "addHere": "Hier hinzufügen",
+    "depositCurrency": "Einzahlungswährung",
+    "chooseNetwork": "Netzwerk wählen",
+    "howToDeposit": "Wie zahle ich Krypto ein?",
+    "chooseBonus": "Wählen Sie Ihren Bonus",
+    "minDeposit": "Min. Einzahlung",
+    "bonusInfo": "Ihr Einzahlungsbetrag und Bonus werden in Ihrem {casino} mit {wager} Umsatzbedingung gutgeschrieben.",
+    "bonusTC": "Bonus AGB",
+    "depositAddress": "Einzahlungsadresse",
+    "copyAddress": "Adresse kopieren",
+    "copySuccess": "Einzahlungsadresse kopiert!",
+    "sendOnly": "Senden Sie nur <strong>USDT</strong> an diese Adresse.",
+    "minTransfer": "Überweisungen unter <strong>1 USDT</strong> werden nicht gutgeschrieben.",
+    "fiatUnavailable": "Fiat-Einzahlung ist noch nicht verfügbar.",
+    "useCrypto": "Bitte verwenden Sie Krypto zur Einzahlung."
   }
 }

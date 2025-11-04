@@ -9,6 +9,7 @@ import { type ReactNode, Suspense } from "react";
 import GlobalProvider from "@/providers/global-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import ServerComponents from "@/components/server-components";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -101,7 +102,10 @@ export default async function RootLayout({
       <body>
         <Suspense fallback={<Loading />}>
           <NextIntlClientProvider>
-            <GlobalProvider>{children}</GlobalProvider>
+            <GlobalProvider>
+              {children}
+              <ServerComponents />
+            </GlobalProvider>
           </NextIntlClientProvider>
         </Suspense>
       </body>

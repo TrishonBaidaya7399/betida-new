@@ -42,5 +42,29 @@
     "sports": "Sports",
     "chat": "Chat",
     "chatComingSoon": "Chat feature is coming soon!"
+  },
+  "DepositModal": {
+    "title": "Deposit",
+    "tabs": {
+      "crypto": "Crypto",
+      "fiat": "Fiat"
+    },
+    "more": "More",
+    "didntSee": "Didn't see your currency?",
+    "addHere": "Add here",
+    "depositCurrency": "Deposit Currency",
+    "chooseNetwork": "Choose CoinNetwork",
+    "howToDeposit": "How to deposit crypto?",
+    "chooseBonus": "Choose your bonus",
+    "minDeposit": "Min.deposit",
+    "bonusInfo": "Your deposit amount and bonus will be credited in your {casino} with {wager} wager requirement.",
+    "bonusTC": "Bonus T&C",
+    "depositAddress": "Deposit address",
+    "copyAddress": "Copy Address",
+    "copySuccess": "Deposit address copied successfully!",
+    "sendOnly": "Send only <strong>USDT</strong> to this deposit address.",
+    "minTransfer": "Transfers below <strong>1 USDT</strong> will not be credited.",
+    "fiatUnavailable": "Fiat deposit is not available yet.",
+    "useCrypto": "Please use Crypto to deposit funds."
   }
 }

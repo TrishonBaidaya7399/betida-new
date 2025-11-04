@@ -23,7 +23,7 @@ export default async function HomePage({ params }: Props) {
 
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
           {t("subHeading")}
-          <code className="rounded bg-muted px-2 py-1 text-sm font-medium">
+          <code className="rounded bg-muted text-foreground/55 px-2 py-1 text-sm font-medium">
             {t("pageName")}
           </code>
         </p>

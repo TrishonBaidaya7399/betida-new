@@ -182,7 +182,7 @@ function SidebarMenuItem({
       <button
         onClick={handleClick}
         className={`
-          flex w-full items-center justify-between px-3 py-2 cursor-pointer transition-all text-left
+          flex w-full items-center justify-between px-3 py-2 cursor-pointer transition-all text-left duration-300
           ${
             isInGroup
               ? "rounded-none first:rounded-t-lg last:rounded-b-lg text-sm"
@@ -190,8 +190,8 @@ function SidebarMenuItem({
           }
           ${
             isActive
-              ? "bg-linear-to-r from-primary to-background text-accent-foreground"
-              : "hover:bg-foreground/10"
+              ? "bg-linear-to-r from-primary to-primary-2 text-Background"
+              : "hover:bg-linear-to-r hover:from-primary hover:via-primary hover:to-background-1 duration-300"
           }
         `}
       >
@@ -219,7 +219,7 @@ function SidebarMenuItem({
             <>
               <span className={isInGroup ? "text-sm" : ""}>{item.text}</span>
               {item.badge && (
-                <span className="bg-green-500 text-white text-xs px-2 py-0.5 rounded-full ml-auto">
+                <span className="bg-foreground/55 text-foreground text-xs px-2 py-0.5 rounded-full ml-auto">
                   {item.badge}
                 </span>
               )}
@@ -259,11 +259,11 @@ function SidebarMenuItem({
                       }
                     }}
                     className={`
-                      flex w-full items-center gap-2 px-3 py-2 text-xs transition-colors text-left
+                      flex w-full items-center gap-2 px-3 py-2 text-xs transition-colors text-left duration-300
                       ${
                         isChildActive
-                          ? "bg-linear-to-r from-primary to-background text-accent-foreground"
-                          : "hover:bg-foreground/5"
+                          ? "bg-linear-to-r from-primary to-primary-2 text-Background"
+                          : "hover:bg-linear-to-r hover:from-primary hover:via-primary hover:to-background-1 duration-300"
                       }
                     `}
                   >
@@ -279,7 +279,14 @@ function SidebarMenuItem({
                         />
                       </div>
                     )}
-                    <span>{child.text}</span>
+                    <span className="flex flex-row items-center gap-1">
+                      <ChevronRight
+                        size={20}
+                        className="text-foreground"
+                        strokeWidth={2}
+                      />
+                      {child.text}
+                    </span>
                   </button>
                 );
               })}

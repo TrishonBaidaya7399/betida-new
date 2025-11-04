@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { Globe } from "lucide-react";
 import {
   DropdownMenu,
@@ -39,16 +39,14 @@ export default function LanguageSwitcher() {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <Suspense fallback={<div className="bg-gray rounded-lg size-10" />}>
-          <Button
-            variant="gray"
-            size="icon"
-            aria-label={`Current language: ${currentOption.label}`}
-          >
-            <Globe className="w-4 h-4 text-foreground/70" />
-            <span className="sr-only">{currentOption.label}</span>
-          </Button>
-        </Suspense>
+        <Button
+          variant="gray"
+          size="icon"
+          aria-label={`Current language: ${currentOption.label}`}
+        >
+          <Globe className="w-4 h-4 text-foreground/70" />
+          <span className="sr-only">{currentOption.label}</span>
+        </Button>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent

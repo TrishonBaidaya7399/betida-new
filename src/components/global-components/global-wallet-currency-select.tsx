@@ -72,7 +72,8 @@ export default function GlobalWalletCurrencySelect() {
   const [selectedFiat, setSelectedFiat] = useState("EUR");
   const [selectedSymbol, setSelectedSymbol] = useState("€");
 
-  const { selectedCurrency, setSelectedCurrency } = useWalletStore();
+  const { selectedCurrency, setSelectedCurrency, openDepositModal } =
+    useWalletStore();
 
   useEffect(() => {
     const urlCurrency = searchParams.get("currency");
@@ -224,7 +225,7 @@ export default function GlobalWalletCurrencySelect() {
           className="md:hidden h-full px-4 text-sm font-semibold"
           onClick={(e) => {
             e.stopPropagation();
-            toast.info("Deposit feature is coming soon!");
+            openDepositModal();
           }}
         >
           <DepositSvg className="text-background size-6" size={32} />
@@ -235,7 +236,7 @@ export default function GlobalWalletCurrencySelect() {
           className="hidden md:flex h-full px-4 text-sm font-semibold"
           onClick={(e) => {
             e.stopPropagation();
-            toast.info("Deposit feature is coming soon!");
+            openDepositModal();
           }}
         >
           {t("depositLink")}
